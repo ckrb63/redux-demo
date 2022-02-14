@@ -1,11 +1,10 @@
 import classes from './Auth.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { authActions } from '../store';
+import { authActions } from '../store/auth';
 import UserProfile from './UserProfile';
 import { Fragment } from 'react';
 const Auth = () => {
   const auth = useSelector((state)=> state.auth.auth);
-  console.log(auth);
   const dispatch = useDispatch();
   const loginButtonHandler = (event) => {
     event.preventDefault();
